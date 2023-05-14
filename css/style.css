@@ -126,6 +126,10 @@ body._lock {
   font-size: 14px;
   line-height: 24px;
   color: #131313;
+  transition: color .3s ease 0s;
+}
+.menu__link:hover {
+  color: #008E4D;
 }
 
 .header__tel {
@@ -243,11 +247,6 @@ body._lock {
   line-height: 130%;
   color: #000000;
 }
-.swiper-button-next::after,
-.swiper-button-prev::after {
-  content: "";
-
-}
 .swiper-button-next,
 .swiper-button-prev {
   position: absolute;
@@ -257,10 +256,23 @@ body._lock {
   height: 40px;
   border-radius: 50%;
   background-color: #008E4D;
+  transition: background-color .3s ease 0s;
 }
 .swiper-button-prev {
   right: 58px;
   left: initial;
+}
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  content: "";
+}
+.swiper-button-next:active,
+.swiper-button-prev:active{
+  background-color: #01703D;
+}
+.swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+  opacity: 1;
+  background-color: #99D6B8;
 }
 /* ===== shop ===== */
 .shop {
@@ -294,7 +306,16 @@ body._lock {
 
 .blog__item {
   max-width: 384px;
+  cursor: pointer;
+  transition: .3s ease 0s;
 }
+.blog__item:hover{
+  transform: translateY(-5px);
+}
+.blog__item:hover .card__title{
+  color: #008E4D;
+}
+
 .blog__item-card {
 }
 .card {
@@ -302,6 +323,7 @@ body._lock {
   display: flex;
   flex-direction: column;
   background-color: #eee;
+  border-radius: 24px;
 }
 .card__img {
   padding: 16px 16.5px;
@@ -327,6 +349,7 @@ body._lock {
   line-height: 22px;
   color: #131313;
   margin-bottom: 15px;
+  transition: color .3s ease 0s;
 }
 .card__desc {
   font-weight: 400;
