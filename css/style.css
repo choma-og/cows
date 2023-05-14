@@ -533,7 +533,7 @@ body._lock {
     overflow: auto;
     transition: left .3s ease 0s;
   }
-  .menu__body::before {
+  .menu__body._active::before {
     content: "";
     width: 100%;
     position: fixed;
