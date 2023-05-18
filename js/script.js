@@ -88,3 +88,45 @@ const scrollUp = () => {
     : scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
+
+/*=============== SHOW POP UP ===============*/
+const popupBody = document.querySelector(".popup__body");
+const headerButton = document.querySelector(".header__button");
+const popupContent = document.querySelector(".popup__content");
+const popupClose = document.querySelector(".popup__close");
+
+  headerButton.addEventListener("click", (e) => {
+    document.body.classList.add("stop-scrolling");
+    popupBody.classList.add("_active");
+    popupContent.classList.add("_active");
+})
+
+  popupBody.addEventListener("click", (e) => {
+    if (e.target === popupBody) {
+      document.body.classList.remove("stop-scrolling");
+      popupBody.classList.remove("_active");
+      popupContent.classList.remove("_active");
+    }
+  })
+
+  window.addEventListener("keydown", (e) => {
+    if (e.key === 'Escape') {
+      document.body.classList.remove("stop-scrolling");
+      popupBody.classList.remove("_active");
+      popupContent.classList.remove("_active");
+    }
+  })
+
+  popupClose.addEventListener("click", (e) => {
+    document.body.classList.remove("stop-scrolling");
+    popupBody.classList.remove("_active");
+    popupContent.classList.remove("_active");
+  })
+
+/*=============== HOVER TITLE ===============*/
+function hoverOnLeft() {
+  document.getElementById("blog__title").classList.add("hover_active")
+}
+function hoverOffLeft() {
+  document.getElementById("blog__title").classList.remove("hover_active")
+}

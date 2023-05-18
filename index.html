@@ -44,9 +44,9 @@
         <div class="header__buttons">
           <div class="header__phone">
             <a class="header__tel" href="tel:+78005553535">+7 800 555 35 35</a>
-              <div class="phone"><i class='bx bx-phone-call'></i></div>
+              <a href="tel:+78005553535" class="phone"><i class='bx bx-phone-call'></i></a>
           </div>
-          <a href="#" class="header__button btn">Напишите нам</a>
+          <button type="button" class="header__button btn">Напишите нам</button>
         </div>
       </div>
     </header>
@@ -153,11 +153,11 @@
       <!--==================== BLOG ====================-->
       <section class="blog">
         <div class="blog__container">
-          <h2 class="blog__title title">
+          <h2 class="blog__title title" id="blog__title">
             блог <img src="img/stroke.svg" alt="">
           </h2>
           <ul class="blog__list">
-            <li class="blog__item">
+            <li class="blog__item" onmouseover="hoverOnLeft()" onmouseout="hoverOffLeft()">
               <article class="blog__item-card card">
                 <div class="card__img">
                   <img src="img/blog/1.jpg" alt="">
@@ -175,7 +175,7 @@
                 </div>
               </article>
             </li>
-            <li class="blog__item">
+            <li class="blog__item" onmouseover="hoverOnLeft()" onmouseout="hoverOffLeft()">
               <article class="blog__item-card card">
                 <div class="card__img">
                   <img src="img/blog/2.jpg" alt="">
@@ -193,7 +193,7 @@
                 </div>
               </article>
             </li>
-            <li class="blog__item">
+            <li class="blog__item" onmouseover="hoverOnLeft()" onmouseout="hoverOffLeft()">
               <article class="blog__item-card card">
                 <div class="card__img">
                   <img src="img/blog/3.jpg" alt="">
@@ -279,6 +279,31 @@
       <a href="#" class="scrollup" id="scroll-up">
         <i class='bx bx-chevrons-up'></i>
       </a>
+    <!--========== POP UP ==========-->
+    <div id="popup" class="popup">
+      <div class="popup__body">
+        <div class="popup__content">
+          <a id="popup__close" href="#" class="popup__close">
+            <img src="img/x.svg" alt="">
+          </a>
+          <div class="popup__wrapper">
+            <h2 class="popup__title">Если возникли вопросы или предложения</h2>
+            <form class="popup__form form" action="">
+              <div class="form__top">
+                <input class="name" type="text" placeholder="Имя">
+                <input class="email" type="text" placeholder="Телефон или электронный адрес">
+              </div>
+              <div class="form__bottom"><input class="form__text" type="text" placeholder="Сообщение"></div>
+            </form>
+            <div class="popup__send send">
+              <a class="send__btn btn" href="#">Отправить</a>
+              <p class="send__desc">При нажатии на кнопку вы соглашаетесь
+              с правилами конфиденциальности</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>

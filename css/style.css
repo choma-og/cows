@@ -52,7 +52,7 @@ body._lock {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+
 }
 .main {
     flex: 1 1 auto;
@@ -61,6 +61,10 @@ body._lock {
     max-width: 1340px;
     margin: 0 auto;
     padding: 0 15px;
+}
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
 }
 /* <!--==================== HEADER ====================--> */
 .title {
@@ -131,6 +135,8 @@ body._lock {
   background: #008E4D;
   border-radius: 24px;
   display: inline-block;
+  cursor: pointer;
+  outline: none;
 }
 .phone {
   display: none;
@@ -245,6 +251,15 @@ body._lock {
 }
 .blog__title {
   margin-bottom: 41px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 130%;
+  text-transform: uppercase;
+  color: #181818;
+  display: inline-flex;
+  align-items: center;
+  column-gap: 10px;
+  transition: .3s all ease 0s;
 }
 .blog__list {
   display: grid;
@@ -261,6 +276,10 @@ body._lock {
 }
 .blog__item:hover .card__title{
   color: #008E4D;
+}
+.blog__title.hover_active{
+  column-gap: 15px;
+  transition: .3s all ease 0s;
 }
 .card {
   height: 100%;
@@ -392,6 +411,177 @@ body._lock {
 /* Show Scroll Up*/
 .show-scroll {
   bottom: 40px;
+}
+
+/*=============== POP UP ===============*/
+.popup._active {
+  display: block;
+} 
+.popup__body {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, .8);
+  left: 0;
+  top: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s ease 0s;
+}
+.popup__body._active {
+  opacity: 1;
+  visibility: visible;
+  transition: all .3s ease 0s;
+}
+.popup__content {
+  position: relative;
+  padding: 64px;
+  width: 996px;
+  height: 584px;
+  background-color: white;
+  border-radius: 24px;
+  display: none;
+}
+.popup__content._active {
+  display: flex;
+}
+.popup__wrapper {
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+.popup__close {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+.popup__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 56px;
+  letter-spacing: 0.04em;
+  color: #008E4D;
+  max-width: 536px;
+  margin-bottom: 48px;
+}
+
+input {
+  padding: 24px;
+  background-color: #F5F5F5;
+}
+input::placeholder {
+  font-weight: 500;
+  line-height: 24px;
+  color: #131313;
+}
+.form {
+  margin-bottom: 24px;
+}
+.form__top {
+  display: flex;
+  column-gap: 24px;
+  margin-bottom: 24px;
+}
+.name {
+  flex: 1 1 49%;
+}
+.email {
+  flex: 1 1 49%;
+}
+.form__bottom {
+  display: flex;
+}
+.form__text {
+  flex: 1 1 100%;
+  padding: 24px 24px 80px 24px;
+}
+.send {
+  display: flex;
+  align-items: center;
+  column-gap: 24px;
+}
+.send__btn {
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+  padding: 12px 24px;
+  background: #008E4D;
+  border-radius: 24px;
+  display: inline-block;
+  cursor: pointer;
+}
+.send__desc {
+  max-width: 354px;
+  font-weight: 500;
+  line-height: 24px;
+  color: #131313;
+}
+/* ================POP UP MEDIA=================== */
+@media (max-width:1024px) {
+  .popup__content {
+    padding: 40px;
+    width: 711px;
+    height: 522px;
+  }
+}
+@media (max-width:760px) {
+  .popup__title {
+    font-size: 25px;
+    margin-bottom: 24px;
+    max-width: none;
+    line-height: 30px;
+  }
+  .name {
+    flex: 1 1 100%;
+  }
+  .email {
+    flex: 1 1 100%;
+  }
+  .send__btn {
+    flex: 1 1 100%;
+    text-align: center;
+    margin-bottom: 10px;
+  }
+  .form__top {
+    flex-wrap: wrap;
+    row-gap: 24px;
+  }
+  .form__text {
+    padding: 24px 24px 24px 24px;
+  }
+  .send {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .send__desc {
+    text-align: center;
+    font-size: 13px;
+    max-width: none;
+  }
+  .popup__content {
+    width: 500px;
+    height: 486px;
+    padding: 24px;
+  }
+}
+@media (max-width:550px) {
+  .popup__content {
+    width: 100%;
+    height: 100%;
+    border-radius: initial;
+  }
+  .popup__wrapper {
+    justify-content: flex-start;
+  }
+  .popup__title {
+    margin-top: 10px;
+  }
 }
 /* =================================== */
 @media (max-width: 1100px) {
