@@ -145,7 +145,6 @@ const sr = ScrollReveal({
   origin: 'top',
   distance: '60px',
   duration: 2500,
-  delay: 100,
 })
 sr.reveal(`.hero__container`)
 sr.reveal(`.shop__map , .news__container , .about__content`, { origin: 'left' })
