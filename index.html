@@ -21,22 +21,22 @@
           <div class="menu__icon">
             <span></span>
           </div>
-          <nav class="menu__body">
+          <nav class="menu__body" id="menu-body">
             <ul class="menu__list">
               <li class="menu__item">
-                <a href="#" class="menu__link">Каталог</a>
+                <a href="#hero" class="menu__link">Каталог</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Акции</a>
+                <a href="#news" class="menu__link">Акции</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Наши магазины</a>
+                <a href="#shop" class="menu__link">Наши магазины</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">Блог</a>
+                <a href="#blog" class="menu__link">Блог</a>
               </li>
               <li class="menu__item">
-                <a href="#" class="menu__link">О компании</a>
+                <a href="#about" class="menu__link">О компании</a>
               </li>
             </ul>
           </nav>
@@ -53,7 +53,7 @@
     <!--==================== MAIN ====================-->
     <main class="main">
       <!--==================== HERO ====================-->
-      <section class="hero">
+      <section class="hero" id="hero">
         <div class="hero__container">
           <div class="hero__swiper swiper">
             <div class="swiper-wrapper">
@@ -81,7 +81,7 @@
         </div>
       </section>
       <!--==================== NEWS ====================-->
-      <section class="news">
+      <section class="news" id="news">
         <div class="news__container">
           <div class="news__swiper swiper">
             <div class="swiper-wrapper">
@@ -142,7 +142,7 @@
         </div>
       </section>
       <!--==================== SHOP ====================-->
-      <section class="shop">
+      <section class="shop" id="shop">
         <div class="shop__container">
           <h2 class="shop__title title">
             Наши магазины <img src="img/stroke.svg" alt="">
@@ -151,10 +151,10 @@
         </div>
       </section>
       <!--==================== BLOG ====================-->
-      <section class="blog">
+      <section class="blog" id="blog">
         <div class="blog__container">
           <h2 class="blog__title title" id="blog__title">
-            блог <img src="img/stroke.svg" alt="">
+            блог <img class="" src="img/stroke.svg" alt="">
           </h2>
           <ul class="blog__list">
             <li class="blog__item" onmouseover="hoverOnLeft()" onmouseout="hoverOffLeft()">
@@ -213,7 +213,7 @@
         </div>
       </section>
       <!--==================== ABOUT ====================-->
-      <section class="about">
+      <section class="about" id="about">
         <div class="about__container">
           <h2 class="about__title title">
             О компании <img src="img/stroke.svg" alt="">
@@ -307,6 +307,7 @@
   </div>
   <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  <script src="js/scrollreveal.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,4 +1,4 @@
-// ===== burger
+/*=============== BURGER ===============*/
 const iconMenu = document.querySelector('.menu__icon');
 const menuBody = document.querySelector('.menu__body');
 if (iconMenu) {
@@ -8,8 +8,17 @@ if (iconMenu) {
     menuBody.classList.toggle('_active');
   })
 }
+/*=============== REMOVE MENU MOBILE ===============*/
+const menuLink = document.querySelectorAll('.menu__link')
 
-// ===== swiper hero
+const linkAction = () => {
+    iconMenu.classList.toggle('_active');
+    document.body.classList.toggle('_lock')
+    menuBody.classList.toggle('_active');
+}
+menuLink.forEach(n => n.addEventListener('click', linkAction))
+
+/*=============== SLIDER HERO ===============*/
 var swiperHero = new Swiper(".hero__swiper", {
   loop: true,
   autoplay: {
@@ -33,7 +42,7 @@ var swiperHero = new Swiper(".hero__swiper", {
   },
 });
 
-// ===== swiper news
+/*=============== SLIDER NEWS ===============*/
 var swiperNews = new Swiper(".news__swiper", {
   spaceBetween: 50,
   grabCursor: true,
@@ -46,7 +55,7 @@ var swiperNews = new Swiper(".news__swiper", {
 
 });
 
-// ===== map
+/*=============== MAP ===============*/
 let center = [52.402894959960115, 83.52543784659326];
 function init() {
   var myMap = new ymaps.Map('map', {
@@ -130,3 +139,15 @@ function hoverOnLeft() {
 function hoverOffLeft() {
   document.getElementById("blog__title").classList.remove("hover_active")
 }
+
+/*=============== SCROLL REVEAL ANIMATION ===============*/
+const sr = ScrollReveal({
+  origin: 'top',
+  distance: '60px',
+  duration: 2500,
+  delay: 100,
+})
+sr.reveal(`.hero__swiper`)
+sr.reveal(`.news__card , .blog__item`, {interval: 100})
+sr.reveal(`.shop__map , .about__content`, { origin: 'left' })
+sr.reveal(`.health__data, .about__img`, { origin: 'right' })
