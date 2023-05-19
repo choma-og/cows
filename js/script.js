@@ -12,9 +12,9 @@ if (iconMenu) {
 const menuLink = document.querySelectorAll('.menu__link')
 
 const linkAction = () => {
-    iconMenu.classList.toggle('_active');
-    document.body.classList.toggle('_lock')
-    menuBody.classList.toggle('_active');
+    iconMenu.classList.remove('_active');
+    menuBody.classList.remove('_active');
+    document.body.classList.remove('_lock')
 }
 menuLink.forEach(n => n.addEventListener('click', linkAction))
 
