@@ -148,6 +148,5 @@ const sr = ScrollReveal({
   delay: 100,
 })
 sr.reveal(`.hero__swiper`)
-sr.reveal(`.news__card , .blog__list`, {interval: 100})
-sr.reveal(`.shop__map , .about__content`, { origin: 'left' })
-sr.reveal(`.health__data, .about__img`, { origin: 'right' })
+sr.reveal(`.shop__map , .news__swiper , .about__content`, { origin: 'left' })
+sr.reveal(`.health__data, .about__img , .blog__list`, { origin: 'right' })
