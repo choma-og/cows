@@ -12,9 +12,9 @@ if (iconMenu) {
 const menuLink = document.querySelectorAll('.menu__link')
 
 const linkAction = () => {
-    iconMenu.classList.remove('_active');
-    menuBody.classList.remove('_active');
-    document.body.classList.remove('_lock')
+  iconMenu.classList.remove('_active');
+  menuBody.classList.remove('_active');
+  document.body.classList.remove('_lock')
 }
 menuLink.forEach(n => n.addEventListener('click', linkAction))
 
@@ -148,6 +148,6 @@ const sr = ScrollReveal({
   delay: 100,
 })
 sr.reveal(`.hero__swiper`)
-sr.reveal(`.news__card , .blog__item`, {interval: 100})
+sr.reveal(`.news__card , .blog__list`, {interval: 100})
 sr.reveal(`.shop__map , .about__content`, { origin: 'left' })
 sr.reveal(`.health__data, .about__img`, { origin: 'right' })
