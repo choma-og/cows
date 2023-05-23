@@ -52,7 +52,7 @@ body._lock {
     min-height: 100%;
     display: flex;
     flex-direction: column;
-
+    overflow-y: hidden;
 }
 .main {
     flex: 1 1 auto;
@@ -64,6 +64,16 @@ body._lock {
 }
 .stop-scrolling {
   height: 100%;
+  overflow: hidden;
+}
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
   overflow: hidden;
 }
 /* <!--==================== HEADER ====================--> */
@@ -108,7 +118,6 @@ body._lock {
   transition: color .3s ease 0s;
 }
 .header__tel {
-  display: flex;
   align-items: center;
   font-weight: 600;
   font-size: 14px;
@@ -681,11 +690,11 @@ input::placeholder {
     transform: rotate(45deg) translate(0px, 50%);
   }
   .menu__body {
-    position: absolute;
+    position: fixed;
     top: 0;
+    bottom: 0;
     left: -100%;
     width: 100%;
-    height: 100vh;
     background-color: white;
     padding: 140px 15px 30px 15px;
     overflow: auto;
